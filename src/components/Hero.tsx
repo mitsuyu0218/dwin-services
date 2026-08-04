@@ -242,7 +242,8 @@ export default function Hero() {
               style={{
                 position: index === 0 ? 'relative' : 'absolute',
                 fontFamily: JP_FONT,
-                fontSize: 'clamp(64px, 19vw, 260px)',
+                // 横長で背の低い画面ではタイトルに重なるため、高さでも上限をかける
+                fontSize: 'clamp(56px, min(19vw, 26vh), 260px)',
                 fontWeight: 900,
                 color: '#ffffff',
                 opacity: index === activeIndex ? 1 : 0,
